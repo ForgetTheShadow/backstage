@@ -1,10 +1,16 @@
-/* 
-* @Author: Marte
-* @Date:   2018-09-26 14:39:55
-* @Last Modified by:   Marte
-* @Last Modified time: 2018-09-26 14:50:39
-*/
+import Vue from 'vue';
 
-$(document).ready(function(){
-    
-});
+import router from './router/index.js';
+import App from './app.vue';
+import ElementUI from 'element-ui';
+Vue.use(ElementUI);
+
+import 'element-ui/lib/theme-chalk/index.css';
+
+new Vue({
+    el:'#app',
+    router,
+    render(create){
+        return create(App);
+    }
+})

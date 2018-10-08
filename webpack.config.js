@@ -67,7 +67,7 @@ module.exports = {
 				use: 'vue-loader'
 			},
 			{ 
-				test: /\.css$/, 
+				test: /\.css$/,
 				use: ['style-loader','css-loader']  
 			},
 			{
@@ -83,6 +83,13 @@ module.exports = {
 						presets:['env']
 					}
 				}]
+			},
+			{
+				test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+				loader: 'url-loader',
+				options: {
+				  limit: 10000
+				}
 			}
 		]
 	}
